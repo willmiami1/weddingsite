@@ -28,7 +28,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Reveal-on-scroll animation
 const revealTargets = document.querySelectorAll(
   '.section-head, .about-copy, .about-banner, .stat-band, ' +
-    '.rate-card, .rate-disclaimer, .included, .gallery-placeholder, ' +
+    '.rate-card, .rate-disclaimer, .included, .gallery-item, ' +
     '.quote-card, .faq-item, .contact-card, .contact-map'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
@@ -45,6 +45,46 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 }
 );
 revealTargets.forEach((el) => observer.observe(el));
+
+// ============ GALLERY LIGHTBOX ============
+const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const lightbox = document.getElementById('lightbox');
+const lbContent = document.getElementById('lbContent');
+let current = 0;
+
+const showItem = (i) => {
+  current = (i + galleryItems.length) % galleryItems.length;
+  const full = galleryItems[current].getAttribute('data-full');
+  lbContent.innerHTML = `<img src="${full}" alt="Destiny Ranch wedding photo">`;
+};
+
+const openLightbox = (i) => {
+  showItem(i);
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+};
+
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  lbContent.innerHTML = '';
+  document.body.style.overflow = '';
+};
+
+galleryItems.forEach((item, i) =>
+  item.addEventListener('click', () => openLightbox(i))
+);
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => showItem(current - 1));
+document.getElementById('lbNext').addEventListener('click', () => showItem(current + 1));
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showItem(current - 1);
+  if (e.key === 'ArrowRight') showItem(current + 1);
+});
 
 // Only one FAQ open at a time
 const faqItems = document.querySelectorAll('.faq-item');
