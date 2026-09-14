@@ -72,21 +72,23 @@ const closeLightbox = () => {
   document.body.style.overflow = '';
 };
 
-galleryItems.forEach((item, i) =>
-  item.addEventListener('click', () => openLightbox(i))
-);
-document.getElementById('lbClose').addEventListener('click', closeLightbox);
-document.getElementById('lbPrev').addEventListener('click', () => showItem(current - 1));
-document.getElementById('lbNext').addEventListener('click', () => showItem(current + 1));
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-document.addEventListener('keydown', (e) => {
-  if (lightbox.hidden) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') showItem(current - 1);
-  if (e.key === 'ArrowRight') showItem(current + 1);
-});
+if (lightbox) {
+  galleryItems.forEach((item, i) =>
+    item.addEventListener('click', () => openLightbox(i))
+  );
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', () => showItem(current - 1));
+  document.getElementById('lbNext').addEventListener('click', () => showItem(current + 1));
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showItem(current - 1);
+    if (e.key === 'ArrowRight') showItem(current + 1);
+  });
+}
 
 // Only one FAQ open at a time
 const faqItems = document.querySelectorAll('.faq-item');
