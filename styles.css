@@ -695,8 +695,19 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
   overflow: hidden;
 }
 .tour-modal-clip {
+  position: relative;
   flex: 1;
   overflow: hidden;
+}
+/* Masks the EverBridal chat bubble injected inside the Wix booking iframe */
+.tour-modal-chat-cover {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  z-index: 1;
 }
 .tour-modal-clip iframe {
   display: block;
@@ -722,17 +733,6 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
   transition: all 0.25s ease;
 }
 .tour-modal-close:hover { background: var(--terra); color: #fff; }
-.tour-modal-fallback {
-  margin: 0;
-  padding: 0.55rem 0.8rem;
-  border-top: 1px solid var(--line);
-  background: var(--ivory);
-  text-align: center;
-  font-size: 0.88rem;
-}
-.tour-modal-fallback a { color: var(--terra); font-weight: 500; }
-.tour-modal-fallback a:hover { text-decoration: underline; }
-
 /* ============ WEDDING CALCULATOR ============ */
 .calc-card {
   max-width: 62rem;
