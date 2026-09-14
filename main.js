@@ -174,10 +174,25 @@ if (tourModal) {
   const tourClose = document.getElementById('tourModalClose');
   const tourTriggers = [tourBtn, ...document.querySelectorAll('[data-open-tour]')];
 
+  // Paste the Google Ads conversion label here once created (Goals > Conversions)
+  const GOOGLE_ADS_TOUR_LABEL = '';
+  let tourTracked = false;
+  const trackTourOpen = () => {
+    if (tourTracked) return;
+    tourTracked = true;
+    // Meta Pixel standard event
+    if (typeof fbq === 'function') fbq('track', 'Schedule');
+    // Google Ads conversion — only fires when a label is configured
+    if (GOOGLE_ADS_TOUR_LABEL && typeof gtag === 'function') {
+      gtag('event', 'conversion', { send_to: 'AW-11395806061/' + GOOGLE_ADS_TOUR_LABEL });
+    }
+  };
+
   const openTourModal = () => {
     if (!tourFrame.src) tourFrame.src = tourFrame.dataset.src;
     tourModal.hidden = false;
     document.body.style.overflow = 'hidden';
+    trackTourOpen();
   };
   const closeTourModal = () => {
     tourModal.hidden = true;
