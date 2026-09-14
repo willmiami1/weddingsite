@@ -172,6 +172,7 @@ if (tourModal) {
   const tourBtn = document.getElementById('tourPromoBtn');
   const tourFrame = document.getElementById('tourFrame');
   const tourClose = document.getElementById('tourModalClose');
+  const tourTriggers = [tourBtn, ...document.querySelectorAll('[data-open-tour]')];
 
   const openTourModal = () => {
     if (!tourFrame.src) tourFrame.src = tourFrame.dataset.src;
@@ -183,7 +184,7 @@ if (tourModal) {
     document.body.style.overflow = '';
   };
 
-  tourBtn.addEventListener('click', openTourModal);
+  tourTriggers.forEach((t) => t.addEventListener('click', openTourModal));
   tourClose.addEventListener('click', closeTourModal);
   tourModal.addEventListener('click', (e) => {
     if (e.target === tourModal) closeTourModal();
