@@ -159,7 +159,7 @@ if (calcBudget) {
     [calcBudget, ...catInputs].forEach((el) => {
       el.value = Number(el.dataset.default).toLocaleString('en-US');
     });
-    packageSel.value = '4995';
+    packageSel.value = '3995';
     update();
   });
 
