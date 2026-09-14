@@ -684,6 +684,7 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
 .tour-modal[hidden] { display: none; }
 .tour-modal-panel {
   --wix-clip: 110px;
+  --wix-chat-clip: 280px;
   position: relative;
   width: min(1100px, 100%);
   height: 90vh;
@@ -695,13 +696,17 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
   overflow: hidden;
 }
 .tour-modal-clip {
+  position: relative;
   flex: 1;
   overflow: hidden;
 }
+
 .tour-modal-clip iframe {
   display: block;
   width: 100%;
-  height: calc(100% + var(--wix-clip));
+  /* Extra bottom height pushes the Wix/EverBridal chat widget (fixed to the
+     iframe viewport bottom) below the visible clip area */
+  height: calc(100% + var(--wix-clip) + var(--wix-chat-clip));
   margin-top: calc(-1 * var(--wix-clip));
   border: 0;
 }
@@ -722,17 +727,6 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
   transition: all 0.25s ease;
 }
 .tour-modal-close:hover { background: var(--terra); color: #fff; }
-.tour-modal-fallback {
-  margin: 0;
-  padding: 0.55rem 0.8rem;
-  border-top: 1px solid var(--line);
-  background: var(--ivory);
-  text-align: center;
-  font-size: 0.88rem;
-}
-.tour-modal-fallback a { color: var(--terra); font-weight: 500; }
-.tour-modal-fallback a:hover { text-decoration: underline; }
-
 /* ============ WEDDING CALCULATOR ============ */
 .calc-card {
   max-width: 62rem;
