@@ -175,7 +175,7 @@ if (tourModal) {
   const tourTriggers = [tourBtn, ...document.querySelectorAll('[data-open-tour]')];
 
   // Paste the Google Ads conversion label here once created (Goals > Conversions)
-  const GOOGLE_ADS_TOUR_LABEL = '';
+  const GOOGLE_ADS_TOUR_LABEL = 'WCHXCOzBh_gcEO3m-Lkq';
   let tourTracked = false;
   const trackTourOpen = () => {
     if (tourTracked) return;
@@ -187,7 +187,11 @@ if (tourModal) {
     window.dataLayer.push({ event: 'book_tour_open' });
     // Google Ads conversion — only fires when a label is configured
     if (GOOGLE_ADS_TOUR_LABEL && typeof gtag === 'function') {
-      gtag('event', 'conversion', { send_to: 'AW-11395806061/' + GOOGLE_ADS_TOUR_LABEL });
+      gtag('event', 'conversion', {
+        send_to: 'AW-11395806061/' + GOOGLE_ADS_TOUR_LABEL,
+        value: 1.0,
+        currency: 'USD'
+      });
     }
   };
 
