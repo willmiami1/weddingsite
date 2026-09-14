@@ -1,0 +1,266 @@
+:root {
+  --bg: #f8f2ea;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: #fffaf4;
+  --text: #2e251f;
+  --muted: #66584d;
+  --accent: #8f5d45;
+  --accent-dark: #6c4330;
+  --border: rgba(143, 93, 69, 0.18);
+  --shadow: 0 24px 60px rgba(46, 37, 31, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.72), transparent 40%),
+    linear-gradient(180deg, #f0e2d4 0%, var(--bg) 45%, #fdfaf7 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 2rem clamp(1.5rem, 4vw, 4rem) 4rem;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(rgba(45, 34, 25, 0.35), rgba(45, 34, 25, 0.62)),
+    radial-gradient(circle at top, rgba(255, 248, 242, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(143, 93, 69, 0.9), rgba(53, 76, 57, 0.8));
+  color: #fff8f2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.brand,
+.nav-links a,
+.button {
+  text-decoration: none;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: rgba(255, 248, 242, 0.9);
+}
+
+.hero-content {
+  margin: auto 0;
+  max-width: 44rem;
+  padding: 4rem 0 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+}
+
+p,
+li {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hero-copy {
+  font-size: 1.1rem;
+  max-width: 38rem;
+  color: rgba(255, 248, 242, 0.92);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: #fff8f2;
+  color: var(--accent-dark);
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 248, 242, 0.55);
+  color: #fff8f2;
+  background: rgba(255, 248, 242, 0.08);
+}
+
+.section {
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.section-heading {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-grid,
+.moment-grid,
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.moment-card,
+.contact-card,
+.highlight-panel {
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card,
+.moment-card,
+.contact-card {
+  padding: 1.8rem;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.detail-list {
+  padding-left: 1.2rem;
+  margin: 1.5rem 0 0;
+}
+
+.highlight-panel {
+  background:
+    linear-gradient(180deg, rgba(143, 93, 69, 0.95), rgba(93, 61, 45, 0.95)),
+    var(--accent);
+  color: #fff8f2;
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.highlight-panel .stat-label {
+  color: rgba(255, 248, 242, 0.86);
+}
+
+.highlight-stat {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.stat-number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.moments {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.55));
+}
+
+.moment-grid,
+.contact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contact-card a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 14vw, 4rem);
+  }
+
+  .hero {
+    min-height: auto;
+  }
+}
