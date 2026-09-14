@@ -458,43 +458,29 @@ h3 { font-size: 1.35rem; }
 }
 
 /* ============ TESTIMONIALS ============ */
-.quote-grid {
+.testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  max-width: 62rem;
+  margin: 0 auto;
 }
-.quote-card {
-  background: var(--ivory);
-  border: 1px solid var(--line);
+.testimonial-card {
+  border: 6px solid #fff;
+  padding: 0;
+  background: none;
+  cursor: pointer;
   border-radius: var(--radius);
-  padding: 2.4rem 2rem 2rem;
-  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.quote-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-.quote-card::before {
-  content: "\201C";
-  position: absolute;
-  top: 0.4rem;
-  left: 1.4rem;
-  font-family: var(--font-display);
-  font-size: 4.4rem;
-  line-height: 1;
-  color: var(--linen);
+.testimonial-card:hover { transform: translateY(-5px); }
+.testimonial-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-.quote-card blockquote {
-  position: relative;
-  font-style: italic;
-  color: var(--bark);
-  font-size: 1rem;
-}
-.quote-card figcaption {
-  margin-top: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--terra);
-}
-.quote-wide { grid-column: span 2; }
 
 /* ============ FAQ ============ */
 .faq-list { display: grid; gap: 0.9rem; }
@@ -657,8 +643,6 @@ h3 { font-size: 1.35rem; }
 @media (max-width: 1020px) {
   .rate-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-  .quote-grid { grid-template-columns: 1fr 1fr; }
-  .quote-wide { grid-column: span 2; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
@@ -697,8 +681,7 @@ h3 { font-size: 1.35rem; }
   .stat-band { grid-template-columns: repeat(2, 1fr); }
   .included-list { columns: 1; }
   .contact-grid { grid-template-columns: 1fr; }
-  .quote-grid { grid-template-columns: 1fr; }
-  .quote-wide { grid-column: span 1; }
+  .testimonial-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
