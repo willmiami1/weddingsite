@@ -182,6 +182,9 @@ if (tourModal) {
     tourTracked = true;
     // Meta Pixel standard event
     if (typeof fbq === 'function') fbq('track', 'Schedule');
+    // GTM custom event — usable as a trigger for Google Ads conversion tags
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'book_tour_open' });
     // Google Ads conversion — only fires when a label is configured
     if (GOOGLE_ADS_TOUR_LABEL && typeof gtag === 'function') {
       gtag('event', 'conversion', { send_to: 'AW-11395806061/' + GOOGLE_ADS_TOUR_LABEL });
