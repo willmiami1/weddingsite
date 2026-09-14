@@ -118,6 +118,12 @@ p {
   color: var(--muted);
 }
 
+.contact-card address {
+  line-height: 1.7;
+  color: var(--muted);
+  font-style: normal;
+}
+
 .detail-list li {
   color: var(--muted);
 }
