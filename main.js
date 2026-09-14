@@ -27,8 +27,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Reveal-on-scroll animation
 const revealTargets = document.querySelectorAll(
-  '.section-head, .about-copy, .about-photo, .stat-band, .moment-card, ' +
-    '.suite-note, .rate-card, .rate-disclaimer, .included, .gallery-item, ' +
+  '.section-head, .about-copy, .about-banner, .stat-band, ' +
+    '.rate-card, .rate-disclaimer, .included, .gallery-item, ' +
     '.quote-card, .faq-item, .contact-card, .contact-map'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
