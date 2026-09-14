@@ -410,6 +410,18 @@ h3 { font-size: 1.35rem; }
   color: var(--sage);
 }
 
+/* ============ CALENDAR ============ */
+.calendar-embed {
+  max-width: 62rem;
+  margin: 0 auto;
+  min-height: 480px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
 /* ============ GALLERY ============ */
 .gallery-grid {
   display: grid;
