@@ -799,8 +799,8 @@ h3 { font-size: 1.35rem; }
     padding: 0.9rem 6%;
     border-top: 1px solid var(--line);
   }
-  .nav-socials { margin: 1.1rem 6% 0; }
-  .nav-cta { margin: 1rem 6% 1.2rem; }
+  .nav-socials { margin: 1.1rem 6% 1.4rem; }
+  .nav-cta { margin: 1rem 6%; }
   .nav-toggle { display: flex; }
 }
 
