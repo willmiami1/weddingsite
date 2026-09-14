@@ -165,3 +165,33 @@ if (calcBudget) {
 
   update();
 }
+
+// ============ BOOK A TOUR MODAL ============
+const tourModal = document.getElementById('tourModal');
+if (tourModal) {
+  const tourBtn = document.getElementById('tourPromoBtn');
+  const tourFrame = document.getElementById('tourFrame');
+  const tourClose = document.getElementById('tourModalClose');
+
+  const openTourModal = () => {
+    if (!tourFrame.src) tourFrame.src = tourFrame.dataset.src;
+    tourModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+  const closeTourModal = () => {
+    tourModal.hidden = true;
+    document.body.style.overflow = '';
+  };
+
+  tourBtn.addEventListener('click', openTourModal);
+  tourClose.addEventListener('click', closeTourModal);
+  tourModal.addEventListener('click', (e) => {
+    if (e.target === tourModal) closeTourModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!tourModal.hidden && e.key === 'Escape') closeTourModal();
+  });
+
+  // Support direct links (and testing) via ?tour=1
+  if (new URLSearchParams(location.search).get('tour') === '1') openTourModal();
+}

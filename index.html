@@ -412,9 +412,11 @@
     <section class="section" id="book-a-tour">
       <div class="container">
         <div class="tour-promo">
-          <img src="images/book-a-tour-promo.jpg"
-               alt="Like what you see so far? Don't miss out on the great opportunity — free wedding draw. Book your tour today!"
-               width="1122" height="1402" loading="lazy">
+          <button class="tour-promo-btn" id="tourPromoBtn" type="button" aria-haspopup="dialog" aria-label="Open the tour booking calendar">
+            <img src="images/book-a-tour-promo.jpg"
+                 alt="Like what you see so far? Don't miss out on the great opportunity — free wedding draw. Book your tour today!"
+                 width="1122" height="1402" loading="lazy">
+          </button>
         </div>
       </div>
     </section>
@@ -604,6 +606,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============ BOOK A TOUR MODAL ============ -->
+  <div class="tour-modal" id="tourModal" hidden>
+    <div class="tour-modal-panel" role="dialog" aria-modal="true" aria-label="Book your Destiny Ranch tour">
+      <button class="tour-modal-close" id="tourModalClose" aria-label="Close">&times;</button>
+      <div class="tour-modal-clip">
+        <iframe id="tourFrame" title="Destiny Ranch Venue Tour — booking calendar"
+                data-src="https://www.destinyranchevents.com/booking-calendar/45-minutes-venue-tour"></iframe>
+      </div>
+      <p class="tour-modal-fallback">
+        Prefer a full page?
+        <a href="https://www.destinyranchevents.com/booking-calendar/45-minutes-venue-tour" target="_blank" rel="noopener">Open the booking page in a new tab &rarr;</a>
+      </p>
+    </div>
+  </div>
 
   <!-- ============ LIGHTBOX ============ -->
   <div class="lightbox" id="lightbox" hidden>

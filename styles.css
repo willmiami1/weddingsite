@@ -655,6 +655,17 @@ h3 { font-size: 1.35rem; }
   max-width: 480px;
   margin: 0 auto;
 }
+.tour-promo-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+}
+.tour-promo-btn:hover { transform: translateY(-4px); }
 .tour-promo img {
   width: 100%;
   height: auto;
@@ -662,40 +673,68 @@ h3 { font-size: 1.35rem; }
   box-shadow: var(--shadow);
 }
 
-/* ============ BOOK A TOUR PAGE ============ */
-.tour-hero {
-  background: var(--cream);
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-  padding: 4.6rem 0 4.2rem;
+/* ============ BOOK A TOUR MODAL ============ */
+.tour-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(55, 44, 33, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5vh 2vw;
 }
-.tour-hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); max-width: 21ch; margin: 0 auto; }
-.tour-hero .section-sub { max-width: 560px; }
-
-.booking-wrap {
-  max-width: 62rem;
-  margin: 0 auto;
-}
-.booking-frame {
+.tour-modal[hidden] { display: none; }
+.tour-modal-panel {
+  --wix-clip: 110px;
+  position: relative;
+  width: min(1100px, 100%);
+  height: 90vh;
   background: #fff;
-  border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
-.booking-frame iframe {
+.tour-modal-clip {
+  flex: 1;
+  overflow: hidden;
+}
+.tour-modal-clip iframe {
   display: block;
   width: 100%;
-  height: 1500px;
+  height: calc(100% + var(--wix-clip));
+  margin-top: calc(-1 * var(--wix-clip));
   border: 0;
 }
-.booking-fallback {
-  text-align: center;
-  margin-top: 1.6rem;
+.tour-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--ivory);
   color: var(--bark);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
-.booking-fallback a { color: var(--terra); font-weight: 500; }
-.booking-fallback a:hover { text-decoration: underline; }
+.tour-modal-close:hover { background: var(--terra); color: #fff; }
+.tour-modal-fallback {
+  margin: 0;
+  padding: 0.55rem 0.8rem;
+  border-top: 1px solid var(--line);
+  background: var(--ivory);
+  text-align: center;
+  font-size: 0.88rem;
+}
+.tour-modal-fallback a { color: var(--terra); font-weight: 500; }
+.tour-modal-fallback a:hover { text-decoration: underline; }
 
 /* ============ WEDDING CALCULATOR ============ */
 .calc-card {
