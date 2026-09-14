@@ -762,6 +762,7 @@ h3 { font-size: 1.35rem; }
   align-items: center;
   justify-content: center;
 }
+.lightbox[hidden] { display: none; }
 .lb-content {
   max-width: min(1100px, 88vw);
   max-height: 86vh;
