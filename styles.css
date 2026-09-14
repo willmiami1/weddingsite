@@ -189,16 +189,6 @@ h3 { font-size: 1.35rem; }
 .nav a:not(.social-link):hover { color: var(--ink); }
 .nav a:not(.social-link):hover::after { width: 100%; }
 
-.nav a.nav-book {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  color: var(--terra);
-  font-weight: 500;
-}
-.nav a.nav-book svg { width: 17px; height: 17px; flex: 0 0 auto; }
-.nav a.nav-book:hover { color: var(--bark); }
-
 .nav-socials { margin-left: 0.3rem; }
 .nav .social-link {
   color: var(--bark);
@@ -648,6 +638,18 @@ h3 { font-size: 1.35rem; }
 .lb-close { top: 20px; right: 24px; }
 .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
 .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+/* ============ BOOK A TOUR SECTION ============ */
+.tour-promo {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.tour-promo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
 /* ============ BOOK A TOUR PAGE ============ */
 .tour-hero {

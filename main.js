@@ -29,7 +29,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const revealTargets = document.querySelectorAll(
   '.section-head, .about-copy, .about-banner, .stat-band, ' +
     '.rate-card, .rate-disclaimer, .included, .gallery-item, ' +
-    '.testimonial-card, .faq-item, .contact-card, .contact-map'
+    '.testimonial-card, .faq-item, .contact-card, .contact-map, .tour-promo'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
