@@ -98,6 +98,44 @@ faqItems.forEach((item) =>
   })
 );
 
+// ============ CONVERSION TRACKING ============
+// Google Ads conversion labels (Goals > Conversions > See event snippet).
+// Leave '' to disable the Google Ads conversion for that action.
+const ADS_ID = 'AW-11395806061';
+const ADS_LABELS = {
+  book_tour_open: 'WCHXCOzBh_gcEO3m-Lkq',
+  phone_call_click: '',
+  email_click: '',
+  get_directions_click: '',
+};
+const trackedOnce = new Set();
+const trackConversion = (name, fbEvent, fbCustom) => {
+  if (trackedOnce.has(name)) return; // once per page load
+  trackedOnce.add(name);
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: name });
+  if (typeof fbq === 'function' && fbEvent) {
+    fbq(fbCustom ? 'trackCustom' : 'track', fbEvent);
+  }
+  if (ADS_LABELS[name] && typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      send_to: ADS_ID + '/' + ADS_LABELS[name],
+      value: 1.0,
+      currency: 'USD',
+    });
+  }
+};
+
+// Phone, email and directions link clicks
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  if (href.startsWith('tel:')) trackConversion('phone_call_click', 'Contact');
+  else if (href.startsWith('mailto:')) trackConversion('email_click', 'Contact');
+  else if (href.includes('maps.google.com')) trackConversion('get_directions_click', 'FindLocation');
+});
+
 // ============ WEDDING CALCULATOR ============
 const calcBudget = document.getElementById('calcBudget');
 if (calcBudget) {
@@ -141,11 +179,15 @@ if (calcBudget) {
   };
 
   [calcBudget, ...catInputs].forEach((el) => {
-    el.addEventListener('input', update);
+    el.addEventListener('input', () => {
+      trackConversion('calculator_used', 'WeddingCalculatorUsed', true);
+      update();
+    });
     el.addEventListener('blur', () => { formatField(el); update(); });
   });
 
   packageSel.addEventListener('change', () => {
+    trackConversion('calculator_used', 'WeddingCalculatorUsed', true);
     if (packageSel.value !== 'custom') {
       venueInput.value = Number(packageSel.value).toLocaleString('en-US');
       update();
@@ -174,25 +216,11 @@ if (tourModal) {
   const tourClose = document.getElementById('tourModalClose');
   const tourTriggers = [tourBtn, ...document.querySelectorAll('[data-open-tour]')];
 
-  // Paste the Google Ads conversion label here once created (Goals > Conversions)
-  const GOOGLE_ADS_TOUR_LABEL = 'WCHXCOzBh_gcEO3m-Lkq';
   let tourTracked = false;
   const trackTourOpen = () => {
     if (tourTracked) return;
     tourTracked = true;
-    // Meta Pixel standard event
-    if (typeof fbq === 'function') fbq('track', 'Schedule');
-    // GTM custom event — usable as a trigger for Google Ads conversion tags
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'book_tour_open' });
-    // Google Ads conversion — only fires when a label is configured
-    if (GOOGLE_ADS_TOUR_LABEL && typeof gtag === 'function') {
-      gtag('event', 'conversion', {
-        send_to: 'AW-11395806061/' + GOOGLE_ADS_TOUR_LABEL,
-        value: 1.0,
-        currency: 'USD'
-      });
-    }
+    trackConversion('book_tour_open', 'Schedule');
   };
 
   const openTourModal = () => {
