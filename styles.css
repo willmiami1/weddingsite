@@ -161,32 +161,13 @@ h3 { font-size: 1.35rem; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  color: var(--ink);
+  height: 54px;
+  overflow: hidden;
 }
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1.5px solid var(--taupe);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--bark);
-}
-.brand-text {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-.brand-text em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--sage-deep);
+/* logo PNG has large built-in margins; oversize and clip to trim them */
+.brand-logo {
+  height: 96px;
+  width: auto;
 }
 
 .nav {
@@ -820,6 +801,8 @@ h3 { font-size: 1.35rem; }
   }
   .nav-socials { margin: 1.1rem 6% 0; }
   .nav-cta { margin: 1rem 6% 1.2rem; }
+  .brand { height: 46px; }
+  .brand-logo { height: 82px; }
   .nav-toggle { display: flex; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2.4rem; }
