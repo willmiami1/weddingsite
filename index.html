@@ -1,163 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Destiny Ranch Events | Rustic Wedding Venue in Bushnell, Florida</title>
-    <meta
-      name="description"
-      content="Discover Destiny Ranch Events, a rustic Florida wedding venue with a historic barn, sunset ceremony spaces, and scenic ranch views."
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero" id="top">
-      <nav class="nav">
-        <a class="brand" href="#top">Destiny Ranch Events</a>
-        <div class="nav-links">
-          <a href="#experience">Experience</a>
-          <a href="#venue">Venue</a>
-          <a href="#moments">Moments</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destiny Ranch Events | Rustic Wedding Venue in Bushnell, Florida</title>
+  <meta name="description" content="Destiny Ranch Events is a 38-acre rustic wedding and event venue in Bushnell, Florida — historic Legacy Barn, sunset ceremony site, horses, and picture-perfect oak scenery between Orlando and Tampa.">
+  <meta name="theme-color" content="#3b2e22">
 
-      <div class="hero-content">
-        <p class="eyebrow">Bushnell, Florida</p>
-        <h1>A warm, refined ranch setting for unforgettable wedding weekends.</h1>
-        <p class="hero-copy">
-          Celebrate beneath the oaks, gather in the historic Legacy Barn, and host
-          the kind of day that feels effortless from the first toast to the last
-          dance.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Schedule a Tour</a>
-          <a class="button button-secondary" href="#venue">Explore the Venue</a>
-        </div>
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Destiny Ranch Events">
+  <meta property="og:title" content="Destiny Ranch Events — Rustic Wedding Venue in Bushnell, FL">
+  <meta property="og:description" content="A 38-acre ranch venue with a historic barn, sunset ceremony site, and scenic oak backdrops between Orlando and Tampa.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/2674ea_e80d1fe922dc42e1abcd89b160d0c59e~mv2.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "Destiny Ranch Events",
+    "url": "https://www.destinyranchevents.com/",
+    "description": "38-acre rustic wedding and private event venue with a historic barn, outdoor sunset ceremony site, and ranch scenery in Bushnell, Florida.",
+    "telephone": "+1-561-305-6263",
+    "email": "admin@destinyranchevents.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2549 County Road 476 East",
+      "addressLocality": "Bushnell",
+      "addressRegion": "FL",
+      "postalCode": "33513",
+      "addressCountry": "US"
+    },
+    "maximumAttendeeCapacity": 180,
+    "sameAs": [
+      "https://www.instagram.com/destinyranchevents",
+      "https://www.facebook.com/destinyranchevents/",
+      "https://www.youtube.com/channel/UC0TlfRJ8RWyo6b5zvi-mpZg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-note">Bushnell, Florida &nbsp;·&nbsp; Between Orlando &amp; Tampa &nbsp;·&nbsp; <a href="tel:5613056263">(561) 305-6263</a></span>
+      <div class="social-bar">
+        <a href="https://www.instagram.com/destinyranchevents" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.36 1.05.42 2.24.06 1.27.07 1.65.07 4.87s-.01 3.6-.07 4.87c-.06 1.19-.25 1.82-.42 2.24-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.05.36-2.24.42-1.27.06-1.65.07-4.87.07s-3.6-.01-4.87-.07c-1.19-.06-1.82-.25-2.24-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.36-1.05-.42-2.24C2.21 15.6 2.2 15.22 2.2 12s.01-3.6.07-4.87c.06-1.19.25-1.82.42-2.24.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.05-.36 2.24-.42C8.4 2.21 8.78 2.2 12 2.2m0-2.2C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.4-11.85a1.44 1.44 0 1 1-1.44 1.44 1.44 1.44 0 0 1 1.44-1.44Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/destinyranchevents/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UC0TlfRJ8RWyo6b5zvi-mpZg" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+        </a>
       </div>
-    </header>
+    </div>
+  </div>
 
-    <main>
-      <section class="section intro" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Why couples choose Destiny Ranch</p>
-          <h2>Rustic character, polished details, and room to make the day your own.</h2>
-        </div>
-        <div class="feature-grid">
-          <article class="card">
-            <h3>Historic barn setting</h3>
-            <p>
-              The Legacy Barn brings together rustic charm and modern comfort for
-              dining, dancing, and heartfelt celebrations.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Scenic ceremony spaces</h3>
-            <p>
-              Choose from outdoor locations framed by pasture views, mature oaks,
-              and sunset light that photographs beautifully.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Designed for full-day events</h3>
-            <p>
-              Spacious grounds, wedding party prep spaces, and guest-friendly flow
-              create an experience that feels relaxed and seamless.
-            </p>
-          </article>
-        </div>
-      </section>
+  <!-- ============ NAV ============ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">DR</span>
+        <span class="brand-text">Destiny Ranch <em>Events</em></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#weddings">Weddings</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a class="button button-primary nav-cta" href="https://www.destinyranchevents.com/booking-calendar/45-minutes-venue-tour" target="_blank" rel="noopener">Book a Tour</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-      <section class="section split-section" id="venue">
-        <div class="split-copy">
-          <p class="eyebrow">The venue</p>
-          <h2>Set across 38 countryside acres with a venue experience built for celebration.</h2>
-          <p>
-            Destiny Ranch Events pairs a restored barn atmosphere with open-air
-            ceremony options, ranch views, and thoughtfully planned spaces for
-            guests, catering, and your wedding party.
-          </p>
-          <ul class="detail-list">
-            <li>Up to 180 seated wedding guests</li>
-            <li>Outdoor ceremony locations with sunset-facing views</li>
-            <li>Historic Legacy Barn for receptions</li>
-            <li>On-site spaces for getting ready</li>
-            <li>Photo backdrops with pastures, trees, and ranch character</li>
-          </ul>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-bg" role="img" aria-label="Sunset over the pastures at Destiny Ranch"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow eyebrow-light">A 38-acre ranch in Bushnell, Florida</p>
+      <h1>Where oak trees, golden light,<br class="desktop-break"> and your story come together.</h1>
+      <p class="hero-copy">
+        Say your vows facing the sunset, celebrate in the historic Legacy Barn,
+        and give your guests a wedding weekend that feels effortless from the
+        first toast to the last dance.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://www.destinyranchevents.com/booking-calendar/45-minutes-venue-tour" target="_blank" rel="noopener">Schedule a Tour</a>
+        <a class="button button-ghost" href="#about">Explore the Ranch</a>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#about" aria-label="Scroll to About">
+      <span></span>
+    </a>
+  </section>
+
+  <main>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">About the Ranch</p>
+          <h2>Central Florida countryside, with a barn full of history.</h2>
         </div>
-        <div class="highlight-panel">
-          <div class="highlight-stat">
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              Destiny Ranch Events sits on 38 acres of central Florida countryside,
+              surrounded by oak trees and incredible scenery — a perfect rustic
+              setting for weddings and private events in the Orlando–Tampa area.
+            </p>
+            <p>
+              At the heart of the ranch stands the <strong>Legacy Barn</strong>,
+              built in the early 1900s in Georgia to accommodate the army and later
+              moved to Florida. It was restored to keep its old charm, and today it
+              pairs that character with a state-of-the-art commercial kitchen and
+              full audio &amp; video equipment.
+            </p>
+            <p>
+              Outside, our ceremony spot faces the sunset, and picture-perfect
+              locations are scattered across the property. Horses and cows live on
+              the ranch and make a memorable addition to your day.
+            </p>
+            <ul class="about-details">
+              <li>38 acres of oaks, pastures &amp; photo backdrops</li>
+              <li>Historic Legacy Barn, restored with modern comforts</li>
+              <li>Sunset-facing outdoor ceremony site</li>
+              <li>Horses &amp; cows on the property</li>
+              <li>Fruit trees throughout — oranges, tangerines, plums, bananas &amp; grapes</li>
+            </ul>
+          </div>
+          <div class="about-photos">
+            <figure class="about-photo about-photo-tall">
+              <img src="https://static.wixstatic.com/media/2674ea_27606d347ab0457e9b7d9570c2df58e7~mv2.jpg/v1/fill/w_760,h_950,al_c,q_85,enc_auto/about-1.jpg" alt="The grounds at Destiny Ranch" loading="lazy">
+            </figure>
+            <figure class="about-photo">
+              <img src="https://static.wixstatic.com/media/2674ea_c52c94e3700b4cb4b2e74078590e9c0e~mv2.jpg/v1/fill/w_760,h_560,al_c,q_85,enc_auto/about-2.jpg" alt="Scenery around the Legacy Barn" loading="lazy">
+            </figure>
+          </div>
+        </div>
+        <div class="stat-band">
+          <div class="stat">
             <span class="stat-number">38</span>
             <span class="stat-label">acres of ranch scenery</span>
           </div>
-          <div class="highlight-stat">
+          <div class="stat">
             <span class="stat-number">1900s</span>
-            <span class="stat-label">historic barn roots</span>
+            <span class="stat-label">historic Legacy Barn</span>
           </div>
-          <div class="highlight-stat">
+          <div class="stat">
+            <span class="stat-number">180</span>
+            <span class="stat-label">seated guests</span>
+          </div>
+          <div class="stat">
             <span class="stat-number">1</span>
-            <span class="stat-label">beautiful place to gather everyone you love</span>
+            <span class="stat-label">unforgettable sunset ceremony</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section moments" id="moments">
-        <div class="section-heading">
-          <p class="eyebrow">What your day can include</p>
-          <h2>Every part of the celebration has a place here.</h2>
+    <!-- ============ WEDDINGS & EVENTS ============ -->
+    <section class="section section-tinted" id="weddings">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Weddings &amp; Events</p>
+          <h2>Every part of your celebration has a place here.</h2>
+          <p class="section-sub">
+            From sunset vows to barn receptions — and quinceañeras, family
+            gatherings, and private events in between.
+          </p>
         </div>
         <div class="moment-grid">
           <article class="moment-card">
+            <div class="moment-icon">☀</div>
             <h3>Ceremony</h3>
-            <p>Say your vows outdoors with a natural backdrop and golden-hour light.</p>
+            <p>Exchange vows at our outdoor ceremony site with wood benches, framed by oaks and facing the sunset.</p>
           </article>
           <article class="moment-card">
+            <div class="moment-icon">✦</div>
             <h3>Cocktail Hour</h3>
-            <p>Invite guests to mingle between the barn and the open grounds.</p>
+            <p>Guests mingle between the outdoor bar, the pastures, and the barn while you take golden-hour portraits.</p>
           </article>
           <article class="moment-card">
+            <div class="moment-icon">♫</div>
             <h3>Reception</h3>
-            <p>Host dinner and dancing in a space that feels both welcoming and memorable.</p>
+            <p>Dinner and dancing in the Legacy Barn — Bose sound, moving lights, a 16×9&nbsp;ft LED screen, and room for 180.</p>
           </article>
           <article class="moment-card">
-            <h3>Photography</h3>
-            <p>Capture portraits among the trees, pasture fences, and ranch scenery.</p>
+            <div class="moment-icon">✧</div>
+            <h3>Portraits</h3>
+            <p>Photo locations across all 38 acres — and you may even pose with one of our horses.</p>
           </article>
         </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Plan your visit</p>
-          <h2>Ready to see Destiny Ranch Events in person?</h2>
+        <div class="suite-note">
           <p>
-            Schedule a tour, ask about availability, and start planning a wedding
-            day that feels both beautiful and easy.
+            <strong>Getting ready is part of the day.</strong> Private bride and groom
+            suites each include a bedroom, full bathroom, family room, and kitchen —
+            with covered access to the barn and three hair &amp; makeup stations in
+            the bridal suite.
           </p>
         </div>
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Visit the venue</h3>
-            <p>2549 E County Road 476<br />Bushnell, FL 33513</p>
-            <a
-              href="https://maps.google.com/?q=2549+E+County+Road+476+Bushnell+FL+33513"
-              referrerpolicy="no-referrer"
-              target="_blank"
-              rel="noreferrer noopener"
-              >Open in Maps</a
-            >
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Pricing</p>
+          <h2>Your wedding journey starts here.</h2>
+          <p class="section-sub">
+            We pride ourselves on an unparalleled level of service, so your day
+            exceeds expectations and leaves memories to cherish for years to come.
+            State and local taxes included.
+          </p>
+        </div>
+        <div class="rate-grid">
+          <article class="rate-card rate-featured">
+            <p class="rate-day">Saturday</p>
+            <p class="rate-price">$4,995</p>
+            <p class="rate-note">Full wedding day · 8am – 11pm</p>
           </article>
-          <article class="contact-card">
-            <h3>Call for tours</h3>
-            <p><a href="tel:9545202631">(954) 520-2631</a></p>
-            <p><a href="tel:5613056263">(561) 305-6263</a></p>
+          <article class="rate-card">
+            <p class="rate-day">Friday &amp; Sunday</p>
+            <p class="rate-price">$3,995</p>
+            <p class="rate-note">Full wedding day · 8am – 11pm</p>
           </article>
-          <article class="contact-card">
-            <h3>Venue highlights</h3>
-            <p>Legacy Barn • Outdoor ceremony sites • Ranch views • Wedding-ready spaces</p>
+          <article class="rate-card">
+            <p class="rate-day">Weekdays</p>
+            <p class="rate-price">$2,995</p>
+            <p class="rate-note">Limited hours · 10am – 10pm</p>
+          </article>
+          <article class="rate-card">
+            <p class="rate-day">Private Events</p>
+            <p class="rate-price">$2,000<span class="rate-range">–$4,000</span></p>
+            <p class="rate-note">Parties, quinceañeras &amp; gatherings</p>
           </article>
         </div>
-      </section>
-    </main>
-  </body>
+        <p class="rate-disclaimer">Closed June, July &amp; August · Prices subject to change without notice</p>
+
+        <div class="included">
+          <h3>What's included with your rental</h3>
+          <ul class="included-list">
+            <li>Use of the facilities from 8am to 11pm (music stops at 10pm)</li>
+            <li>Weekday weddings from 10am to 10pm (music stops at 9pm)</li>
+            <li>Main hall of the Legacy Barn</li>
+            <li>Outdoor ceremony area with wood benches</li>
+            <li>Outdoor speakers and wireless mics for the ceremony</li>
+            <li>Fully equipped commercial kitchen</li>
+            <li>Outdoor bar plus two portable bars</li>
+            <li>Ranch photo locations (photographer not included)</li>
+            <li>Private dressing suites with covered access to the barn</li>
+            <li>16 × 9 ft LED screen for your photos and videos</li>
+            <li>Bose speakers, two wireless mics &amp; sound mixer</li>
+            <li>Digital moving lights, disco ball &amp; haze machine</li>
+            <li>Rectangle tables and classic white chairs</li>
+            <li>Complimentary Wi-Fi</li>
+            <li>Wedding venue custodian on site</li>
+            <li>Use of our decor collection</li>
+            <li>Cleaning and trash removal</li>
+            <li>On-site backup generator</li>
+            <li>Pose for pictures with one of our horses</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section section-tinted" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Gallery</p>
+          <h2>Creating unforgettable memories.</h2>
+          <p class="section-sub">A glimpse of real weddings and golden evenings at the ranch.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_2ee8e7ed9c6e41acb8e72675dc520bca~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_2ee8e7ed9c6e41acb8e72675dc520bca~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g1.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_5d588ec861374a198df1fea6230a11c3~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_5d588ec861374a198df1fea6230a11c3~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g2.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_42cb8324ddc44b81832cfbc198d7450f~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_42cb8324ddc44b81832cfbc198d7450f~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g3.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_273dbf85cdf3476c8e069e45f1a0abc9~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_273dbf85cdf3476c8e069e45f1a0abc9~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g4.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_71d01a0c8f85427cb2f9afdb8b7be3e4~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_71d01a0c8f85427cb2f9afdb8b7be3e4~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g5.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_e76d6fdeb62340c68c744bae9c7e533b~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_e76d6fdeb62340c68c744bae9c7e533b~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g6.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_3d08d36aa9f84d0b851dd2a1053c4ffa~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_3d08d36aa9f84d0b851dd2a1053c4ffa~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g7.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_a3faf223647a4f71b0c4856515a14a24~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_a3faf223647a4f71b0c4856515a14a24~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g8.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_7c97131202c64373b1e4c1ad862eef5f~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_7c97131202c64373b1e4c1ad862eef5f~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g9.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_a34087db84e5495e90158b2255901d2c~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_a34087db84e5495e90158b2255901d2c~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g10.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_ff553c53768e441c9560a6680950e2aa~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_ff553c53768e441c9560a6680950e2aa~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g11.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-full="https://static.wixstatic.com/media/2674ea_71dd9c9acc604d1396164367b801af42~mv2.jpg">
+            <img src="https://static.wixstatic.com/media/2674ea_71dd9c9acc604d1396164367b801af42~mv2.jpg/v1/fill/w_640,h_640,al_c,q_82,enc_auto/g12.jpg" alt="Wedding at Destiny Ranch" loading="lazy">
+          </button>
+        </div>
+        <p class="section-note">Follow along on
+          <a href="https://www.instagram.com/destinyranchevents" target="_blank" rel="noopener">Instagram</a> for the latest celebrations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Kind words from our couples.</h2>
+        </div>
+        <div class="quote-grid">
+          <figure class="quote-card">
+            <blockquote>
+              Great and unforgettable moments are made when you combine a special
+              occasion, the people that you love, and a great location. We're very
+              pleased to have chosen Destiny Ranch — not only a great place but
+              also a great and professional staff.
+            </blockquote>
+            <figcaption>— Manu &amp; Jr</figcaption>
+          </figure>
+          <figure class="quote-card">
+            <blockquote>
+              You all were the best wedding venue and hosts! Thank you so much for
+              making our day so very special!
+            </blockquote>
+            <figcaption>— Skyler &amp; Rachel</figcaption>
+          </figure>
+          <figure class="quote-card quote-wide">
+            <blockquote>
+              We just celebrated my daughter's wedding at Destiny Ranch, and I can't
+              recommend this venue enough. Will and Jacqueline are absolutely amazing
+              hosts. Their venue is stunning and magical — beautiful oak trees, rustic
+              barn, romantic ceremony area, outdoor bar. The bride and groom suites
+              have everything you'd need, and Melissa was an amazing day-of
+              coordinator: literally nothing went wrong that day because of her.
+              Destiny Ranch worked tirelessly to bring our vision to life. 100% recommend.
+            </blockquote>
+            <figcaption>— Emily</figcaption>
+          </figure>
+          <figure class="quote-card">
+            <blockquote>
+              My wife and I were married here. We had the most amazing experience —
+              the owners were a true blessing and the prices were perfect for our
+              budget. I highly recommend Destiny Ranch for your wedding. You won't
+              be disappointed.
+            </blockquote>
+            <figcaption>— Sean</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-tinted" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What's your seating capacity?</summary>
+            <p>180 guests.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you allow outside caterers?</summary>
+            <p>Yes — you can cook your own food in our commercial kitchen or hire any caterer you like.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I bring my own liquor?</summary>
+            <p>Yes, but you must have a licensed bartender serving.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's your payment schedule?</summary>
+            <p>
+              $500 due at signing (your date is officially reserved) · $1,000 due in 60 days ·
+              $1,000 due in 120 days · $1,000 due in 180 days · $1,000 due in 240 days
+              (Saturday weddings only) · balance paid 60 days prior to the wedding.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Do we have to use your preferred vendors?</summary>
+            <p>No — but we're happy to recommend great ones on request.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What time can we come in?</summary>
+            <p>The bridal suites are available at 8am on your wedding day (10am for weekday weddings).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a clean-up fee?</summary>
+            <p>No — you just need to remove the items you brought with you. Cleaning and trash removal are included.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What time does the event need to end?</summary>
+            <p>Music stops at 10pm and lights out at 11pm (9pm/10pm on weekdays).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I set up or rehearse the day before?</summary>
+            <p>Unfortunately our schedule doesn't allow it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the barn air-conditioned?</summary>
+            <p>The barn has powerful ceiling fans (and portable heaters in winter). The kitchen and both suites are air-conditioned.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need event insurance?</summary>
+            <p>We highly recommend it — it typically costs $150–$250 and can be purchased online.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you require a security deposit?</summary>
+            <p>Weddings starting September 2026 require a $250 deposit paid a week before the event, refunded within 3 days after the event if there are no incidents.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's your cancellation policy?</summary>
+            <p>Dates canceled by the client are non-refundable. Dates may be rescheduled by the venue due to force majeure events such as natural disasters, governmental or societal actions, or infrastructure failures.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Plan Your Visit</p>
+          <h2>Ready to see Destiny Ranch in person?</h2>
+          <p class="section-sub">Book a 45-minute tour, check available dates, and start planning a day that feels both beautiful and easy.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <article class="contact-card">
+              <h3>Visit the ranch</h3>
+              <p>2549 County Road 476 East<br>Bushnell, FL 33513</p>
+              <a href="https://maps.google.com/?q=2549+County+Road+476+E+Bushnell+FL+33513" target="_blank" rel="noopener">Open in Google Maps →</a>
+            </article>
+            <article class="contact-card">
+              <h3>Call or text</h3>
+              <p><a href="tel:5613056263">(561) 305-6263</a> — Melissa, weddings &amp; tours</p>
+              <p><a href="tel:9545202631">(954) 520-2631</a> — events info</p>
+              <p><a href="mailto:admin@destinyranchevents.com">admin@destinyranchevents.com</a></p>
+            </article>
+            <article class="contact-card contact-card-cta">
+              <h3>Book your tour</h3>
+              <p>Walk the grounds, step inside the Legacy Barn, and picture your day.</p>
+              <a class="button button-primary" href="https://www.destinyranchevents.com/booking-calendar/45-minutes-venue-tour" target="_blank" rel="noopener">Book a 45-Minute Tour</a>
+            </article>
+          </div>
+          <div class="contact-map">
+            <iframe
+              title="Map to Destiny Ranch Events"
+              src="https://www.google.com/maps?q=2549+County+Road+476+E,+Bushnell,+FL+33513&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Destiny Ranch <em>Events</em></p>
+        <p class="footer-tag">A rustic wedding &amp; event venue in Bushnell, Florida — between Orlando and Tampa.</p>
+        <div class="social-bar">
+          <a href="https://www.instagram.com/destinyranchevents" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.36 1.05.42 2.24.06 1.27.07 1.65.07 4.87s-.01 3.6-.07 4.87c-.06 1.19-.25 1.82-.42 2.24-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.05.36-2.24.42-1.27.06-1.65.07-4.87.07s-3.6-.01-4.87-.07c-1.19-.06-1.82-.25-2.24-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.36-1.05-.42-2.24C2.21 15.6 2.2 15.22 2.2 12s.01-3.6.07-4.87c.06-1.19.25-1.82.42-2.24.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.05-.36 2.24-.42C8.4 2.21 8.78 2.2 12 2.2m0-2.2C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.66 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.4-11.85a1.44 1.44 0 1 1-1.44 1.44 1.44 1.44 0 0 1 1.44-1.44Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/destinyranchevents/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UC0TlfRJ8RWyo6b5zvi-mpZg" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#about">About the Ranch</a>
+        <a href="#weddings">Weddings &amp; Events</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:5613056263">(561) 305-6263</a>
+        <a href="tel:9545202631">(954) 520-2631</a>
+        <a href="mailto:admin@destinyranchevents.com">admin@destinyranchevents.com</a>
+        <a href="https://maps.google.com/?q=2549+County+Road+476+E+Bushnell+FL+33513" target="_blank" rel="noopener">2549 County Road 476 E, Bushnell, FL</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Destiny Ranch Events · Bushnell, Florida</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lb-content" id="lbContent"></div>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
