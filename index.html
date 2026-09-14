@@ -419,6 +419,112 @@
       </div>
     </section>
 
+    <!-- ============ WEDDING CALCULATOR ============ -->
+    <section class="section section-tinted" id="calculator">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Wedding Calculator</p>
+          <h2>Plan your big day with confidence.</h2>
+          <p class="section-sub">Estimate costs and see how your choices affect your budget — totals update live as you type.</p>
+        </div>
+        <div class="calc-card">
+          <div class="calc-top">
+            <div class="calc-field">
+              <label for="calcBudget">Total wedding budget</label>
+              <div class="calc-input"><span>$</span><input id="calcBudget" type="text" inputmode="numeric" autocomplete="off" value="30,000" data-default="30000"></div>
+            </div>
+            <div class="calc-field">
+              <label for="calcPackage">Destiny Ranch venue package</label>
+              <select id="calcPackage" class="calc-select">
+                <option value="4995" selected>Saturday — $4,995</option>
+                <option value="3995">Friday &amp; Sunday — $3,995</option>
+                <option value="2995">Weekday — $2,995</option>
+                <option value="custom">Custom venue amount</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-grid">
+            <div class="calc-row">
+              <label for="calcVenue">Venue &amp; Rentals</label>
+              <div class="calc-input"><span>$</span><input id="calcVenue" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="4,995" data-default="4995"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcCatering">Catering &amp; Bar</label>
+              <div class="calc-input"><span>$</span><input id="calcCatering" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="8,000" data-default="8000"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcAttire">Wedding Attire</label>
+              <div class="calc-input"><span>$</span><input id="calcAttire" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="1,800" data-default="1800"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcFlowers">Flowers &amp; Décor</label>
+              <div class="calc-input"><span>$</span><input id="calcFlowers" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="2,200" data-default="2200"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcPhoto">Photography &amp; Video</label>
+              <div class="calc-input"><span>$</span><input id="calcPhoto" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="3,500" data-default="3500"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcMusic">Music / DJ</label>
+              <div class="calc-input"><span>$</span><input id="calcMusic" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="1,500" data-default="1500"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcInvites">Invitations &amp; Stationery</label>
+              <div class="calc-input"><span>$</span><input id="calcInvites" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="500" data-default="500"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcCake">Cake &amp; Desserts</label>
+              <div class="calc-input"><span>$</span><input id="calcCake" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="700" data-default="700"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcHair">Hair &amp; Makeup</label>
+              <div class="calc-input"><span>$</span><input id="calcHair" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="600" data-default="600"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcTransport">Transportation</label>
+              <div class="calc-input"><span>$</span><input id="calcTransport" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="500" data-default="500"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcRings">Wedding Rings</label>
+              <div class="calc-input"><span>$</span><input id="calcRings" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="1,000" data-default="1000"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcFavors">Favors &amp; Gifts</label>
+              <div class="calc-input"><span>$</span><input id="calcFavors" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="400" data-default="400"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcOfficiant">Officiant</label>
+              <div class="calc-input"><span>$</span><input id="calcOfficiant" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="400" data-default="400"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+            <div class="calc-row">
+              <label for="calcMisc">Miscellaneous / Buffer</label>
+              <div class="calc-input"><span>$</span><input id="calcMisc" class="calc-cat" type="text" inputmode="numeric" autocomplete="off" value="1,000" data-default="1000"></div>
+              <span class="calc-share" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="calc-results">
+            <p class="calc-summary">Your total estimated wedding cost is <strong id="calcTotal">$0</strong> out of your <strong id="calcBudgetOut">$0</strong> budget.</p>
+            <div class="calc-bar" role="presentation"><div class="calc-bar-fill" id="calcBarFill"></div></div>
+            <p class="calc-remaining" id="calcRemaining"></p>
+            <button class="button button-outline" id="calcReset" type="button">Reset to defaults</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section class="section" id="contact">
       <div class="container">

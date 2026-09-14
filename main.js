@@ -29,7 +29,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const revealTargets = document.querySelectorAll(
   '.section-head, .about-copy, .about-banner, .stat-band, ' +
     '.rate-card, .rate-disclaimer, .included, .gallery-item, ' +
-    '.testimonial-card, .faq-item, .contact-card, .contact-map, .tour-promo'
+    '.testimonial-card, .faq-item, .contact-card, .contact-map, .tour-promo, .calc-card'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -97,3 +97,71 @@ faqItems.forEach((item) =>
     if (item.open) faqItems.forEach((o) => { if (o !== item) o.open = false; });
   })
 );
+
+// ============ WEDDING CALCULATOR ============
+const calcBudget = document.getElementById('calcBudget');
+if (calcBudget) {
+  const fmt = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
+  const catInputs = Array.from(document.querySelectorAll('.calc-cat'));
+  const packageSel = document.getElementById('calcPackage');
+  const venueInput = document.getElementById('calcVenue');
+  const totalOut = document.getElementById('calcTotal');
+  const budgetOut = document.getElementById('calcBudgetOut');
+  const barFill = document.getElementById('calcBarFill');
+  const remainingOut = document.getElementById('calcRemaining');
+
+  const parse = (el) => Number((el.value || '').replace(/[^0-9]/g, '')) || 0;
+  const formatField = (el) => { el.value = parse(el).toLocaleString('en-US'); };
+
+  const update = () => {
+    const budget = parse(calcBudget);
+    const total = catInputs.reduce((sum, el) => sum + parse(el), 0);
+
+    totalOut.textContent = fmt.format(total);
+    budgetOut.textContent = fmt.format(budget);
+
+    catInputs.forEach((el) => {
+      const share = el.closest('.calc-row').querySelector('.calc-share');
+      const val = parse(el);
+      share.textContent = total && val ? Math.round((val / total) * 100) + '%' : '—';
+    });
+
+    const over = total > budget;
+    barFill.style.width = (budget ? Math.min((total / budget) * 100, 100) : total ? 100 : 0) + '%';
+    barFill.classList.toggle('over', over);
+    remainingOut.classList.toggle('over', over);
+    remainingOut.classList.toggle('under', !over);
+    remainingOut.textContent = over
+      ? fmt.format(total - budget) + ' over budget'
+      : fmt.format(budget - total) + ' left in your budget';
+  };
+
+  [calcBudget, ...catInputs].forEach((el) => {
+    el.addEventListener('input', update);
+    el.addEventListener('blur', () => { formatField(el); update(); });
+  });
+
+  packageSel.addEventListener('change', () => {
+    if (packageSel.value !== 'custom') {
+      venueInput.value = Number(packageSel.value).toLocaleString('en-US');
+      update();
+    }
+  });
+  venueInput.addEventListener('input', () => {
+    if (String(parse(venueInput)) !== packageSel.value) packageSel.value = 'custom';
+  });
+
+  document.getElementById('calcReset').addEventListener('click', () => {
+    [calcBudget, ...catInputs].forEach((el) => {
+      el.value = Number(el.dataset.default).toLocaleString('en-US');
+    });
+    packageSel.value = '4995';
+    update();
+  });
+
+  update();
+}

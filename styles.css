@@ -112,6 +112,17 @@ h3 { font-size: 1.35rem; }
   box-shadow: 0 12px 28px -12px rgba(168, 92, 56, 0.55);
 }
 
+.button-outline {
+  background: transparent;
+  color: var(--sage-deep);
+  border-color: var(--sage);
+}
+.button-outline:hover {
+  background: var(--sage);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* ============ SOCIAL BAR ============ */
 .social-bar { display: flex; gap: 0.55rem; }
 .social-link {
@@ -686,6 +697,113 @@ h3 { font-size: 1.35rem; }
 .booking-fallback a { color: var(--terra); font-weight: 500; }
 .booking-fallback a:hover { text-decoration: underline; }
 
+/* ============ WEDDING CALCULATOR ============ */
+.calc-card {
+  max-width: 62rem;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.4rem 2.6rem;
+}
+.calc-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 2.4rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.8rem;
+}
+.calc-field label,
+.calc-row label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--bark);
+}
+.calc-field label { margin-bottom: 0.4rem; }
+.calc-input {
+  display: flex;
+  align-items: center;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 0.85rem;
+  transition: border-color 0.25s ease;
+}
+.calc-input:focus-within { border-color: var(--sage); }
+.calc-input span { color: var(--taupe); font-weight: 500; margin-right: 0.35rem; }
+.calc-input input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 0.6rem 0;
+  font: inherit;
+  font-weight: 400;
+  color: var(--ink);
+  outline: none;
+}
+.calc-select {
+  width: 100%;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+  font: inherit;
+  font-weight: 400;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+.calc-select:focus { border-color: var(--sage); }
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 2.4rem;
+}
+.calc-row {
+  display: grid;
+  grid-template-columns: 1fr 8.5rem 2.6rem;
+  align-items: center;
+  gap: 0.8rem;
+}
+.calc-share {
+  font-size: 0.82rem;
+  color: var(--taupe);
+  text-align: right;
+}
+.calc-results {
+  margin-top: 2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.calc-summary { font-size: 1.12rem; }
+.calc-summary strong { font-weight: 600; color: var(--bark); }
+.calc-bar {
+  height: 12px;
+  max-width: 34rem;
+  margin: 1.1rem auto 0.7rem;
+  background: var(--linen);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.calc-bar-fill {
+  height: 100%;
+  width: 0;
+  background: var(--sage);
+  border-radius: inherit;
+  transition: width 0.35s ease, background-color 0.35s ease;
+}
+.calc-bar-fill.over { background: var(--terra-deep); }
+.calc-remaining { font-weight: 500; }
+.calc-remaining.under { color: var(--sage-deep); }
+.calc-remaining.over { color: var(--terra-deep); }
+#calcReset { margin-top: 1.5rem; }
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1020px) {
   .rate-grid { grid-template-columns: repeat(2, 1fr); }
@@ -729,6 +847,10 @@ h3 { font-size: 1.35rem; }
   .included-list { columns: 1; }
   .contact-grid { grid-template-columns: 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
+  .calc-top { grid-template-columns: 1fr; }
+  .calc-grid { grid-template-columns: 1fr; }
+  .calc-card { padding: 1.8rem 1.4rem; }
+  .calc-row { grid-template-columns: 1fr 7.5rem 2.4rem; gap: 0.6rem; }
 }
 
 @media (max-width: 560px) {
