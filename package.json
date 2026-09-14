@@ -1,0 +1,15 @@
+{
+  "name": "destiny-ranch-weddings",
+  "version": "1.0.0",
+  "description": "Static landing page redesign for Destiny Ranch Events.",
+  "scripts": {
+    "dev": "live-server --port=8080 --no-browser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
