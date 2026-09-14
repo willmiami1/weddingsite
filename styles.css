@@ -147,6 +147,17 @@ li {
   transform: translateY(-1px);
 }
 
+.button:focus-visible,
+.nav-links a:focus-visible,
+.contact-card a:focus-visible {
+  outline: 3px solid #fff8f2;
+  outline-offset: 3px;
+}
+
+.contact-card a:focus-visible {
+  outline-color: var(--accent-dark);
+}
+
 .button-primary {
   background: #fff8f2;
   color: var(--accent-dark);
