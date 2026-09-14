@@ -164,7 +164,7 @@ h3 { font-size: 1.35rem; }
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.15rem;
 }
 .nav a { white-space: nowrap; }
 .nav a:not(.social-link) {
