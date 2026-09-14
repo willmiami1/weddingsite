@@ -684,6 +684,7 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
 .tour-modal[hidden] { display: none; }
 .tour-modal-panel {
   --wix-clip: 110px;
+  --wix-chat-clip: 280px;
   position: relative;
   width: min(1100px, 100%);
   height: 90vh;
@@ -699,20 +700,13 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
   flex: 1;
   overflow: hidden;
 }
-/* Masks the EverBridal chat bubble injected inside the Wix booking iframe */
-.tour-modal-chat-cover {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 150px;
-  height: 150px;
-  background: #fff;
-  z-index: 1;
-}
+
 .tour-modal-clip iframe {
   display: block;
   width: 100%;
-  height: calc(100% + var(--wix-clip));
+  /* Extra bottom height pushes the Wix/EverBridal chat widget (fixed to the
+     iframe viewport bottom) below the visible clip area */
+  height: calc(100% + var(--wix-clip) + var(--wix-chat-clip));
   margin-top: calc(-1 * var(--wix-clip));
   border: 0;
 }
