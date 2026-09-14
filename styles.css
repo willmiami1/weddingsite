@@ -164,8 +164,9 @@ h3 { font-size: 1.35rem; }
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.4rem;
 }
+.nav a { white-space: nowrap; }
 .nav a:not(.nav-cta):not(.social-link) {
   font-size: 0.92rem;
   font-weight: 400;
@@ -695,7 +696,7 @@ h3 { font-size: 1.35rem; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1320px) {
   .nav {
     position: absolute;
     top: 100%;
