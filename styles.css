@@ -248,6 +248,7 @@ h3 { font-size: 1.35rem; }
   max-width: 720px;
   margin: 0 auto 3.4rem;
 }
+.contact-tour-btn { margin-top: 1.5rem; }
 
 /* reveal on scroll */
 .reveal {
