@@ -104,9 +104,9 @@ faqItems.forEach((item) =>
 const ADS_ID = 'AW-11395806061';
 const ADS_LABELS = {
   book_tour_open: 'WCHXCOzBh_gcEO3m-Lkq',
-  phone_call_click: '',
-  email_click: '',
-  get_directions_click: '',
+  phone_call_click: '2Lh3CPXkhPgcEO3m-Lkq',
+  email_click: '1-0wCKDshPgcEO3m-Lkq',
+  get_directions_click: 'L-fGCL7EiPgcEO3m-Lkq',
 };
 const trackedOnce = new Set();
 const trackConversion = (name, fbEvent, fbCustom) => {
