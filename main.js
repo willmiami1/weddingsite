@@ -79,9 +79,27 @@ if (lightbox) {
   document.getElementById('lbClose').addEventListener('click', closeLightbox);
   document.getElementById('lbPrev').addEventListener('click', () => showItem(current - 1));
   document.getElementById('lbNext').addEventListener('click', () => showItem(current + 1));
+  let swiped = false;
   lightbox.addEventListener('click', (e) => {
+    if (swiped) { swiped = false; return; }
     if (e.target === lightbox) closeLightbox();
   });
+
+  // Swipe left/right to navigate on touch devices
+  let touchX = 0;
+  let touchY = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchX = e.changedTouches[0].clientX;
+    touchY = e.changedTouches[0].clientY;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    const dy = e.changedTouches[0].clientY - touchY;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      swiped = true;
+      showItem(dx < 0 ? current + 1 : current - 1);
+    }
+  }, { passive: true });
   document.addEventListener('keydown', (e) => {
     if (lightbox.hidden) return;
     if (e.key === 'Escape') closeLightbox();
