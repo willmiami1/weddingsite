@@ -6,6 +6,9 @@
   <title>Rustic Barn Wedding Venue Central Florida | Destiny Ranch</title>
   <meta name="description" content="Host up to 180 guests at Destiny Ranch Events in Bushnell, FL. Features our historic 1900s Legacy Barn, sunset ceremonies, and flexible outside catering.">
   <meta name="theme-color" content="#3b2e22">
+  <link rel="canonical" href="https://www.destinyranchevents.com/">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="facebook-domain-verification" content="96srxzmbk8rjfj4okjxqb0f9gmqtcc" />
   <meta name="google-site-verification" content="f7zuKrWym9tLIpIUQP2Zd9o32B00gXAq7f0pLAGcYDk" />
 
@@ -52,7 +55,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/hero-main.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-main.jpg"
+        imagesrcset="images/hero-main-960.jpg 960w, images/hero-main.jpg 1672w"
+        imagesizes="100vw" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
@@ -130,7 +135,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a class="brand" href="#top">
-        <img class="brand-logo" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida">
+        <img class="brand-logo" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360">
       </a>
       <nav class="nav" id="nav">
         <a href="#about">About</a>
@@ -163,6 +168,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <img class="hero-img" src="images/hero-main.jpg"
+         srcset="images/hero-main-960.jpg 960w, images/hero-main.jpg 1672w"
+         sizes="100vw"
          alt="First dance in the Legacy Barn at Destiny Ranch — rated 5 stars on Google with 200+ reviews"
          width="1672" height="941" fetchpriority="high">
   </section>
@@ -223,7 +230,10 @@
           </div>
         </div>
         <figure class="about-banner">
-          <img src="images/about-us.jpg" alt="Destiny Ranch — the entrance gate, the Legacy Barn, and the outdoor ceremony aisle" width="1672" height="941" loading="lazy">
+          <img src="images/about-us.jpg"
+               srcset="images/about-us-640.jpg 640w, images/about-us.jpg 1200w"
+               sizes="(min-width: 821px) 50vw, 100vw"
+               alt="Destiny Ranch — the entrance gate, the Legacy Barn, and the outdoor ceremony aisle" width="1200" height="675" loading="lazy">
         </figure>
       </div>
     </section>
@@ -542,7 +552,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo-img" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" loading="lazy">
+        <img class="footer-logo-img" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360" loading="lazy">
         <p class="footer-tag">A rustic wedding &amp; event venue in Bushnell, Florida — between Orlando and Tampa.</p>
         <div class="social-bar">
           <a href="https://www.instagram.com/destinyranchevents" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
@@ -608,6 +618,31 @@
   </div>
 
   <script src="main.js"></script>
-  <script src="https://dist.eventscalendar.co/embed.js" data-events-calendar-app="proj_LMW922QcHvKTcOi6oM79Q" async></script>
+  <script>
+    // Lazy-load the events calendar embed (and its Typekit fonts) only when
+    // the calendar section approaches the viewport
+    (function () {
+      var section = document.getElementById('calendar');
+      if (!section) return;
+      var loaded = false;
+      function loadCalendar() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://dist.eventscalendar.co/embed.js';
+        s.setAttribute('data-events-calendar-app', 'proj_LMW922QcHvKTcOi6oM79Q');
+        s.async = true;
+        document.body.appendChild(s);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) { loadCalendar(); io.disconnect(); }
+        }, { rootMargin: '600px' });
+        io.observe(section);
+      } else {
+        loadCalendar();
+      }
+    })();
+  </script>
 </body>
 </html>
