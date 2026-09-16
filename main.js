@@ -126,6 +126,12 @@ const ADS_LABELS = {
   email_click: '1-0wCKDshPgcEO3m-Lkq',
   get_directions_click: 'L-fGCL7EiPgcEO3m-Lkq',
 };
+// Roku Ads Manager pixel events
+const ROKU_EVENTS = {
+  book_tour_open: 'SCHEDULE',
+  phone_call_click: 'LEAD',
+  email_click: 'LEAD',
+};
 const trackedOnce = new Set();
 const trackConversion = (name, fbEvent, fbCustom) => {
   if (trackedOnce.has(name)) return; // once per page load
@@ -134,6 +140,9 @@ const trackConversion = (name, fbEvent, fbCustom) => {
   window.dataLayer.push({ event: name });
   if (typeof fbq === 'function' && fbEvent) {
     fbq(fbCustom ? 'trackCustom' : 'track', fbEvent);
+  }
+  if (ROKU_EVENTS[name] && typeof rkp === 'function') {
+    rkp('event', ROKU_EVENTS[name]);
   }
   if (ADS_LABELS[name] && typeof gtag === 'function') {
     gtag('event', 'conversion', {
