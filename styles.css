@@ -762,7 +762,6 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
 .tour-modal[hidden] { display: none; }
 .tour-modal-panel {
   --wix-clip: 110px;
-  --wix-chat-clip: 280px;
   position: relative;
   width: min(1100px, 100%);
   height: 90vh;
@@ -782,11 +781,26 @@ body > div[rendered]:not([data-events-calendar-app]) { display: none !important;
 .tour-modal-clip iframe {
   display: block;
   width: 100%;
-  /* Extra bottom height pushes the Wix/EverBridal chat widget (fixed to the
-     iframe viewport bottom) below the visible clip area */
-  height: calc(100% + var(--wix-clip) + var(--wix-chat-clip));
+  /* Extra top height hides the Wix site header inside the booking iframe */
+  height: calc(100% + var(--wix-clip));
   margin-top: calc(-1 * var(--wix-clip));
   border: 0;
+}
+/* White patch covering the EverBridal/LeadConnector chat bubble AND its
+   "Hi there!" prompt popup, pinned to the iframe's bottom-right corner.
+   Sits over the empty area beneath the booking sidebar. */
+.tour-chat-cover {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 460px;
+  height: 235px;
+  background: #fff;
+  z-index: 1;
+}
+@media (max-width: 820px) {
+  /* On stacked mobile layout keep the cover small so form fields stay visible */
+  .tour-chat-cover { width: 110px; height: 110px; }
 }
 .tour-modal-close {
   position: absolute;
