@@ -131,6 +131,7 @@ const ROKU_EVENTS = {
   book_tour_open: 'SCHEDULE',
   phone_call_click: 'LEAD',
   email_click: 'LEAD',
+  lead_submit: 'LEAD',
 };
 const trackedOnce = new Set();
 const trackConversion = (name, fbEvent, fbCustom) => {
@@ -152,6 +153,25 @@ const trackConversion = (name, fbEvent, fbCustom) => {
     });
   }
 };
+
+const trackRokuLead = () => trackConversion('lead_submit', 'Lead');
+
+// Track outbound booking flow as a lead so Roku can detect a recent conversion.
+const tourFrame = document.getElementById('tourFrame');
+if (tourFrame) {
+  const bookingUrl = tourFrame.dataset.src || tourFrame.src || '';
+  if (bookingUrl) {
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('a[href], button[data-open-tour], #tourPromoBtn, .contact-tour-btn');
+      if (!target) return;
+      trackRokuLead();
+    });
+
+    tourFrame.addEventListener('load', () => {
+      trackRokuLead();
+    }, { once: true });
+  }
+}
 
 // Phone, email and directions link clicks
 document.addEventListener('click', (e) => {
