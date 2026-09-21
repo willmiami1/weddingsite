@@ -290,6 +290,8 @@ if (tourModal) {
     if (!tourModal.hidden && e.key === 'Escape') closeTourModal();
   });
 
-  // Support direct links (and testing) via ?tour=1
-  if (new URLSearchParams(location.search).get('tour') === '1') openTourModal();
+  // Support direct links (and testing) via ?tour=1 or #book-a-tour
+  const hashWantsTour = () => location.hash === '#book-a-tour';
+  if (new URLSearchParams(location.search).get('tour') === '1' || hashWantsTour()) openTourModal();
+  window.addEventListener('hashchange', () => { if (hashWantsTour()) openTourModal(); });
 }
