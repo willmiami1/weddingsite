@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rustic Barn Wedding Venue Central Florida | Destiny Ranch</title>
-  <meta name="description" content="Affordable barn wedding venue on a working horse &amp; cattle ranch in Bushnell, FL — between Orlando and Tampa. Historic 1900s Legacy Barn, sunset ceremonies, up to 180 guests.">
+  <meta name="description" content="Affordable barn wedding venue on a working ranch in Bushnell, FL, between Orlando and Tampa. Historic Legacy Barn, sunset ceremonies, up to 180 guests.">
   <meta name="theme-color" content="#3b2e22">
   <link rel="canonical" href="https://www.destinyranchevents.com/">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -30,55 +30,71 @@
     gtag('config', 'G-T8WWGXP4FZ');
   </script>
 
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel + Roku Pixel (deferred until after page load so they don't block rendering) -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1034474667755426');
-    fbq('track', 'PageView');
+  (function(){
+    function loadPixels(){
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1034474667755426');
+      fbq('track', 'PageView');
+
+      !function(e,r){if(!e.rkp){var t=e.rkp=function(){var e=Array.prototype.slice.call(arguments);e.push(Date.now()),t.eventProcessor?t.eventProcessor.apply(t,e):t.queue.push(e)};t.initiatorVersion="1.0",t.queue=[],t.load=function(e){var t=r.createElement("script");t.async=!0,t.src=e;var n=r.getElementsByTagName("script")[0];(n?n.parentNode:r.body).insertBefore(t,n)},rkp.load("https://cdn.ravm.tv/ust/dist/rkp.loader.js")}}(window,document);
+      rkp('init', 'PaccR5r5AqWe');
+      rkp('event', 'PAGE_VIEW');
+    }
+    if (document.readyState === 'complete') { setTimeout(loadPixels, 0); }
+    else { window.addEventListener('load', function(){ setTimeout(loadPixels, 0); }); }
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1034474667755426&ev=PageView&noscript=1"
   /></noscript>
-
-  <!-- Roku Pixel Code -->
-  <script>
-  !function(e,r){if(!e.rkp){var t=e.rkp=function(){var e=Array.prototype.slice.call(arguments);e.push(Date.now()),t.eventProcessor?t.eventProcessor.apply(t,e):t.queue.push(e)};t.initiatorVersion="1.0",t.queue=[],t.load=function(e){var t=r.createElement("script");t.async=!0,t.src=e;var n=r.getElementsByTagName("script")[0];(n?n.parentNode:r.body).insertBefore(t,n)},rkp.load("https://cdn.ravm.tv/ust/dist/rkp.loader.js")}}(window,document);
-  rkp('init', 'PaccR5r5AqWe');
-  rkp('event', 'PAGE_VIEW');
-  </script>
-  <!-- End Roku Pixel Code -->
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Destiny Ranch Events">
   <meta property="og:title" content="Rustic Barn Wedding Venue Central Florida | Destiny Ranch">
   <meta property="og:description" content="Affordable barn wedding venue on a working horse &amp; cattle ranch in Bushnell, FL. Historic 1900s Legacy Barn, sunset ceremonies, up to 180 guests.">
-  <meta property="og:image" content="images/hero-main.jpg">
+  <meta property="og:url" content="https://www.destinyranchevents.com/">
+  <meta property="og:image" content="https://www.destinyranchevents.com/images/hero-main.jpg">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rustic Barn Wedding Venue Central Florida | Destiny Ranch">
+  <meta name="twitter:description" content="Affordable barn wedding venue on a working ranch in Bushnell, FL, between Orlando and Tampa. Historic Legacy Barn, sunset ceremonies, up to 180 guests.">
+  <meta name="twitter:image" content="https://www.destinyranchevents.com/images/hero-main.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/hero-main.jpg"
-        imagesrcset="images/hero-main-960.jpg 960w, images/hero-main.jpg 1672w"
-        imagesizes="100vw" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero-main.webp"
+        imagesrcset="images/hero-main-960.webp 960w, images/hero-main.webp 1672w"
+        imagesizes="100vw" fetchpriority="high" type="image/webp">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts: load without blocking first paint (system fallback shows until swapped in) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EventVenue",
+    "@type": ["LocalBusiness", "EventVenue"],
+    "@id": "https://www.destinyranchevents.com/#business",
     "name": "Destiny Ranch Events",
     "url": "https://www.destinyranchevents.com/",
+    "logo": "https://www.destinyranchevents.com/images/destiny-ranch-logo.png",
+    "image": "https://www.destinyranchevents.com/images/hero-main.jpg",
     "description": "Rustic barn wedding venue on 38 acres in Bushnell, Florida — historic Legacy Barn, sunset outdoor ceremony site, ranch horses, and seating for up to 180 guests between Orlando and Tampa.",
     "telephone": "+1-561-305-6263",
     "email": "admin@destinyranchevents.com",
+    "priceRange": "$2,995 - $4,995",
+    "currenciesAccepted": "USD",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2549 County Road 476 East",
@@ -87,12 +103,71 @@
       "postalCode": "33513",
       "addressCountry": "US"
     },
+    "hasMap": "https://maps.google.com/?q=2549+County+Road+476+E+Bushnell+FL+33513",
+    "areaServed": [
+      { "@type": "City", "name": "Orlando" },
+      { "@type": "City", "name": "Tampa" },
+      { "@type": "City", "name": "Ocala" },
+      { "@type": "City", "name": "The Villages" },
+      { "@type": "AdministrativeArea", "name": "Central Florida" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "18:00",
+        "description": "Tours by appointment"
+      }
+    ],
     "maximumAttendeeCapacity": 180,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Historic Legacy Barn reception hall", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Sunset-facing outdoor ceremony site", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bridal and groom suites", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bring your own alcohol", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Outside catering allowed", "value": true }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/destinyranchevents",
+      "https://www.facebook.com/destinyranchevents/",
+      "https://www.youtube.com/channel/UC0TlfRJ8RWyo6b5zvi-mpZg",
+      "https://www.eventective.com/bushnell-fl/destiny-ranch-events-797168.html"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.destinyranchevents.com/#organization",
+    "name": "Destiny Ranch Events",
+    "url": "https://www.destinyranchevents.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.destinyranchevents.com/images/destiny-ranch-logo.png",
+      "width": 560,
+      "height": 360
+    },
+    "contactPoint": [
+      { "@type": "ContactPoint", "telephone": "+1-561-305-6263", "contactType": "reservations", "areaServed": "US", "availableLanguage": "English", "description": "Weddings and tours" },
+      { "@type": "ContactPoint", "telephone": "+1-954-520-2631", "contactType": "customer service", "areaServed": "US", "availableLanguage": "English", "description": "Arena events" }
+    ],
     "sameAs": [
       "https://www.instagram.com/destinyranchevents",
       "https://www.facebook.com/destinyranchevents/",
       "https://www.youtube.com/channel/UC0TlfRJ8RWyo6b5zvi-mpZg"
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.destinyranchevents.com/#website",
+    "url": "https://www.destinyranchevents.com/",
+    "name": "Destiny Ranch Events",
+    "publisher": { "@id": "https://www.destinyranchevents.com/#organization" }
   }
   </script>
   <script type="application/ld+json">
@@ -169,7 +244,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a class="brand" href="#top">
-        <img class="brand-logo" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360">
+        <picture><source type="image/webp" srcset="images/destiny-ranch-logo.webp"><img class="brand-logo" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360"></picture>
       </a>
       <nav class="nav" id="nav">
         <a href="#about">About</a>
@@ -201,11 +276,14 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <img class="hero-img" src="images/hero-main.jpg"
-         srcset="images/hero-main-960.jpg 960w, images/hero-main.jpg 1672w"
-         sizes="100vw"
-         alt="First dance in the Legacy Barn at Destiny Ranch — rated 5 stars on Google with 200+ reviews"
-         width="1672" height="941" fetchpriority="high">
+    <picture>
+      <source type="image/webp" srcset="images/hero-main-960.webp 960w, images/hero-main.webp 1672w" sizes="100vw">
+      <img class="hero-img" src="images/hero-main.jpg"
+           srcset="images/hero-main-960.jpg 960w, images/hero-main.jpg 1672w"
+           sizes="100vw"
+           alt="First dance in the Legacy Barn at Destiny Ranch — rated 5 stars on Google with 200+ reviews"
+           width="1672" height="941" fetchpriority="high">
+    </picture>
   </section>
 
   <main>
@@ -565,9 +643,12 @@
       <div class="container">
         <div class="tour-promo">
           <button class="tour-promo-btn" id="tourPromoBtn" type="button" aria-haspopup="dialog" aria-label="Open the tour booking calendar">
-            <img src="images/book-a-tour-promo.jpg"
-                 alt="Like what you see so far? Ready for the next step toward making your dream wedding come true? Don't miss out on the great opportunity — book your tour today!"
-                 width="1122" height="1402" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="images/book-a-tour-promo.webp">
+              <img src="images/book-a-tour-promo.jpg"
+                   alt="Like what you see so far? Ready for the next step toward making your dream wedding come true? Don't miss out on the great opportunity — book your tour today!"
+                   width="1122" height="1402" loading="lazy">
+            </picture>
           </button>
         </div>
       </div>
@@ -612,7 +693,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo-img" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360" loading="lazy">
+        <picture><source type="image/webp" srcset="images/destiny-ranch-logo.webp"><img class="footer-logo-img" src="images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360" loading="lazy"></picture>
         <p class="footer-tag">A rustic wedding &amp; event venue in Bushnell, Florida — between Orlando and Tampa.</p>
         <div class="social-bar">
           <a href="https://www.instagram.com/destinyranchevents" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">

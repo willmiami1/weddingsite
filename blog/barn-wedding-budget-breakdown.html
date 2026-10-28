@@ -29,30 +29,32 @@
     gtag('config', 'G-T8WWGXP4FZ');
   </script>
 
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel + Roku Pixel (deferred until after page load so they don't block rendering) -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1034474667755426');
-    fbq('track', 'PageView');
+  (function(){
+    function loadPixels(){
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1034474667755426');
+      fbq('track', 'PageView');
+
+      !function(e,r){if(!e.rkp){var t=e.rkp=function(){var e=Array.prototype.slice.call(arguments);e.push(Date.now()),t.eventProcessor?t.eventProcessor.apply(t,e):t.queue.push(e)};t.initiatorVersion="1.0",t.queue=[],t.load=function(e){var t=r.createElement("script");t.async=!0,t.src=e;var n=r.getElementsByTagName("script")[0];(n?n.parentNode:r.body).insertBefore(t,n)},rkp.load("https://cdn.ravm.tv/ust/dist/rkp.loader.js")}}(window,document);
+      rkp('init', 'PaccR5r5AqWe');
+      rkp('event', 'PAGE_VIEW');
+    }
+    if (document.readyState === 'complete') { setTimeout(loadPixels, 0); }
+    else { window.addEventListener('load', function(){ setTimeout(loadPixels, 0); }); }
+  })();
   </script>
-  <noscript><img height="1" width="1" style="display:none" alt=""
+  <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1034474667755426&ev=PageView&noscript=1"
   /></noscript>
-
-  <!-- Roku Pixel Code -->
-  <script>
-  !function(e,r){if(!e.rkp){var t=e.rkp=function(){var e=Array.prototype.slice.call(arguments);e.push(Date.now()),t.eventProcessor?t.eventProcessor.apply(t,e):t.queue.push(e)};t.initiatorVersion="1.0",t.queue=[],t.load=function(e){var t=r.createElement("script");t.async=!0,t.src=e;var n=r.getElementsByTagName("script")[0];(n?n.parentNode:r.body).insertBefore(t,n)},rkp.load("https://cdn.ravm.tv/ust/dist/rkp.loader.js")}}(window,document);
-  rkp('init', 'PaccR5r5AqWe');
-  rkp('event', 'PAGE_VIEW');
-  </script>
-  <!-- End Roku Pixel Code -->
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="article">
@@ -63,8 +65,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <!-- Google Fonts: load without blocking first paint (system fallback shows until swapped in) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
 
   <script type="application/ld+json">
   {
@@ -102,7 +106,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a class="brand" href="/">
-        <img class="brand-logo" src="/images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360">
+        <picture><source type="image/webp" srcset="/images/destiny-ranch-logo.webp"><img class="brand-logo" src="/images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360"></picture>
       </a>
       <nav class="nav" id="nav">
         <a href="/#about">About</a>
@@ -226,7 +230,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo-img" src="/images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360" loading="lazy">
+        <picture><source type="image/webp" srcset="/images/destiny-ranch-logo.webp"><img class="footer-logo-img" src="/images/destiny-ranch-logo.png" alt="Destiny Ranch — Bushnell, Florida" width="560" height="360" loading="lazy"></picture>
         <p class="footer-tag">A rustic wedding &amp; event venue in Bushnell, Florida — between Orlando and Tampa.</p>
       </div>
       <div class="footer-links">
